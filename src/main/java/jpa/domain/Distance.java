@@ -3,7 +3,6 @@ package jpa.domain;
 import javax.persistence.Embeddable;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
-import javax.validation.constraints.Positive;
 import javax.validation.constraints.PositiveOrZero;
 
 /**
@@ -15,16 +14,16 @@ import javax.validation.constraints.PositiveOrZero;
 public class Distance {
 
     @PositiveOrZero
-    private Integer distanceMeter;
+    private int distanceMeter;
 
     @OneToOne
     @JoinColumn(name = "distance_target_station_id")
     private Station distanceTargetStation;
 
-    public Distance() {
+    protected Distance() {
     }
 
-    public Distance(Integer distanceMeter, Station distanceTargetStation) {
+    public Distance(int distanceMeter, Station distanceTargetStation) {
         this.distanceMeter = distanceMeter;
         this.distanceTargetStation = distanceTargetStation;
     }

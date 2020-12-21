@@ -1,6 +1,5 @@
 package jpa.domain;
 
-import com.sun.istack.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -10,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
 import jpa.infrastructure.jpa.BaseEntity;
 import org.apache.commons.lang3.StringUtils;
 
